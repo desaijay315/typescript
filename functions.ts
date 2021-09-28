@@ -10,3 +10,9 @@ export const addStrings = (str1: string, str2: string = ""): string => `${str1} 
 export const printFormat = () => {
     console.log()
 }
+
+export const fetchData = (url: string) => Promise.resolve(`Data from ${url}`);
+
+export const getName = (user: {first: string, last: string}): string => {
+    return `${user?.first ?? 'first'} ${user?.last ?? "last"}`;   
+}
